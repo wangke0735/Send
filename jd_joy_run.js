@@ -140,15 +140,7 @@ async function main() {
           run_pins = [[...run_pins].join(',')];
           invite_pins = run_pins;
         } else {
-          console.log(`\n赛跑先给作者两个固定的pin进行助力,然后从账号内部与剩下的固定位置合并后随机抽取进行助力\n如需自己账号内部互助,设置环境变量 JOY_RUN_HELP_MYSELF 为true,则开启账号内部互助\n`)
-          run_pins = run_pins[0].split(',')
-          Object.values(jdCookieNode).filter(item => item.match(/pt_pin=([^; ]+)(?=;?)/)).map(item => run_pins.push(decodeURIComponent(item.match(/pt_pin=([^; ]+)(?=;?)/)[1])))
-          run_pins = [...new Set(run_pins)];
-          let fixPins = run_pins.splice(run_pins.indexOf('zhaosen2580'), 1);
-          fixPins.push(...run_pins.splice(run_pins.indexOf('jd_61f1269fd3236'), 1));
-          const randomPins = getRandomArrayElements(run_pins, run_pins.length);
-          run_pins = [[...fixPins, ...randomPins].join(',')];
-          invite_pins = run_pins;
+          
         }
       }
       cookie = cookiesArr[i];
