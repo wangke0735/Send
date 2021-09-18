@@ -197,7 +197,19 @@ async function sendNotify(text, desp, params = {}, author = '\n\n本通知 By：
   } catch (error) {
     console.error(error);
   }
+  // ck 失效调用wskey转换
 
+if(text.indexOf("cookie已失效") != -1)
+
+{
+
+exec('task Zy143L_wskey_wskey.py ',function(error,stdout,stderr){
+
+console.log(error,stdout,stderr);
+
+});
+
+}
   //提供6种通知
   desp += author; //增加作者信息，防止被贩卖等
   await Promise.all([
