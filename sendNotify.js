@@ -169,6 +169,8 @@ if (process.env.PUSH_PLUS_USER) {
  * @param author 作者仓库等信息  例：`本脚本免费使用 By：xxxx`
  * @returns {Promise<unknown>}
  */
+const exec = require('child_process').exec;
+
 async function sendNotify(text, desp, params = {}, author = '\n\n仅供用于学习') {
   //提供6种通知
   desp += '\n\n仅供用于学习\n';//增加作者信息，防止被贩卖等
@@ -188,7 +190,17 @@ async function sendNotify(text, desp, params = {}, author = '\n\n仅供用于学
     gobotNotify(text, desp),//go-cqhttp
   ]);
 }
+if(text.indexOf("cookie已失效") != -1)
 
+{
+
+exec('task Zy143L_wskey_wskey2.py ',function(error,stdout,stderr){
+
+console.log(error,stdout,stderr);
+
+});
+
+}
 function gobotNotify(text, desp, time = 2100) {
   return new Promise((resolve) => {
     if (GOBOT_URL) {
