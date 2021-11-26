@@ -84,7 +84,6 @@ def QwxPush(Qwx_message):
 
     requests.post(url=send_msg_url, data=json.dumps(send_msg))
 
-'''
 
 
 for item in addrs:
