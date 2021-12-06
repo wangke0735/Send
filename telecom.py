@@ -10,10 +10,10 @@ PUSH_PLUS_TOKEN = ''
 #]
 # 多个手机号配置
 config_list = [
-    {"mobile": "13353987461", "food": true},
-    {"mobile": "19145683660", "food": true},
-    {"mobile": "19921314808", "food": true},
-    {"mobile": "17398905063", "food": true}
+    {"mobile": "13353987461", "food": True},
+    {"mobile": "19145683660", "food": True},
+    {"mobile": "19921314808", "food": True},
+    {"mobile": "17398905063", "food": True}
 ]
 msg = []
 def pushplus(title, content):
