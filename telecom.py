@@ -122,4 +122,4 @@ def main_handler(event, context):
         pushplus('电信签到任务', content)
     return content
 
-#main_handler(1, 1)
+main_handler(1, 1)
