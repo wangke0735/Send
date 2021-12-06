@@ -5,14 +5,16 @@ import requests
 # plus推送
 PUSH_PLUS_TOKEN = ''
 
-config_list = [
-    {"mobile": "12345678910", "food": False}
-]
+#config_list = [
+#    {"mobile": "1234567", "food": False}
+#]
 # 多个手机号配置
-# config_list = [
-#     {"mobile": "12345678910", "food": False},
-#     {"mobile": "12345678911", "food": False}
-# ]
+config_list = [
+    {"mobile": "13353987461", "food": true},
+    {"mobile": "19145683660", "food": true},
+    {"mobile": "19921314808", "food": true},
+    {"mobile": "17398905063", "food": true}
+]
 msg = []
 def pushplus(title, content):
     url = 'http://www.pushplus.plus/send'
